@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SubTracker 订阅管家 — 隐私政策</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif;
+            background: #F8F9FA;
+            color: #1a1a1a;
+            line-height: 1.7;
+            padding: 20px;
+        }
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 16px;
+            padding: 32px 28px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+        }
+        h1 {
+            font-size: 24px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 8px;
+            color: #2D7FF9;
+        }
+        .subtitle {
+            text-align: center;
+            font-size: 14px;
+            color: #8e8e93;
+            margin-bottom: 32px;
+        }
+        h2 {
+            font-size: 17px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin: 24px 0 12px 0;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #e5e5ea;
+        }
+        p {
+            font-size: 15px;
+            color: #3c3c43;
+            margin-bottom: 12px;
+        }
+        ul {
+            padding-left: 20px;
+            margin-bottom: 12px;
+        }
+        li {
+            font-size: 15px;
+            color: #3c3c43;
+            margin-bottom: 6px;
+        }
+        .highlight {
+            background: #f0f7ff;
+            border-left: 3px solid #2D7FF9;
+            padding: 12px 16px;
+            border-radius: 0 8px 8px 0;
+            margin: 16px 0;
+            font-size: 14px;
+        }
+        .contact {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 16px;
+            margin-top: 24px;
+            text-align: center;
+        }
+        .contact a {
+            color: #2D7FF9;
+            text-decoration: none;
+        }
+        .contact a:hover {
+            text-decoration: underline;
+        }
+        .footer {
+            text-align: center;
+            font-size: 13px;
+            color: #8e8e93;
+            margin-top: 24px;
+            padding-top: 16px;
+            border-top: 1px solid #e5e5ea;
+        }
+        @media (max-width: 480px) {
+            body { padding: 12px; }
+            .container { padding: 20px 16px; border-radius: 12px; }
+            h1 { font-size: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🛡️ 隐私政策</h1>
+        <p class="subtitle">SubTracker 订阅管家</p>
+
+        <div class="highlight">
+            <strong>核心原则：</strong>SubTracker 是一款本地优先的订阅管理工具。我们不会收集、上传或存储您的任何个人数据到第三方服务器。
+        </div>
+
+        <h2>一、数据收集与存储</h2>
+        <p>SubTracker 的所有订阅数据均保存在您的设备本地，使用 Apple SwiftData 框架进行安全存储。我们不会主动收集以下任何信息：</p>
+        <ul>
+            <li>个人身份信息（姓名、邮箱、手机号等）</li>
+            <li>设备信息（序列号、IMEI 等）</li>
+            <li>位置信息</li>
+            <li>使用行为数据</li>
+            <li>任何形式的遥测或分析数据</li>
+        </ul>
+        <p>应用不集成任何第三方分析工具、广告 SDK 或数据收集服务。</p>
+
+        <h2>二、iCloud 同步</h2>
+        <p>当您主动开启 iCloud 同步功能后，订阅数据将通过 Apple iCloud（CloudKit）在您的 Apple 设备之间同步。所有数据传输和存储均由 Apple iCloud 服务端到端加密处理，SubTracker 开发者无法访问您的同步数据。</p>
+        <p>iCloud 同步为完全可选功能，您可以随时在应用设置中关闭。关闭后，数据将仅存储在本地设备上。</p>
+
+        <h2>三、OCR 截图识别</h2>
+        <p>应用提供截图识别订阅信息的功能，该功能使用 Apple Vision 框架（VNDocumentCameraViewController / VisionKit）进行本地文字识别。</p>
+        <p><strong>所有图像处理均在您的设备本地完成。</strong>截图不会被上传、保存或分享给任何第三方。识别完成后，原始截图不会被应用留存。</p>
+
+        <h2>四、通知服务</h2>
+        <p>应用可发送本地通知以提醒您即将到期的订阅。通知仅在您的设备上本地生成，通过 Apple UNUserNotificationCenter 框架调度，不涉及任何远程推送服务或第三方服务器。</p>
+        <p>您可以随时在 iOS 设置 → SubTracker → 通知 中关闭通知权限。</p>
+
+        <h2>五、内购与支付</h2>
+        <p>SubTracker 提供可选的 Pro 订阅（自动续期）和终身购买。所有支付均通过 Apple App Store 的 In-App Purchase 系统处理：</p>
+        <ul>
+            <li>我们不存储任何支付信息（信用卡号、银行卡号等）</li>
+            <li>订阅管理和退款由 Apple 处理</li>
+            <li>我们只能看到订阅状态（激活/未激活），无法获取具体支付详情</li>
+        </ul>
+
+        <h2>六、Share Extension（分享扩展）</h2>
+        <p>应用的分享扩展用于检测账单邮件或短信中的订阅信息。该功能在本地处理分享的文本内容，不会将分享内容上传至任何服务器。</p>
+
+        <h2>七、Widget（桌面小组件）</h2>
+        <p>桌面小组件通过 App Group 共享数据，所有数据仍存储在您的设备本地。小组件不进行任何网络请求。</p>
+
+        <h2>八、数据删除</h2>
+        <p>您可以随时在应用设置中清除所有数据。卸载应用将彻底删除所有本地存储的订阅数据。</p>
+        <p>如您使用了 iCloud 同步，可通过以下方式管理同步数据：</p>
+        <ul>
+            <li>iOS 设置 → 您的姓名 → iCloud → 管理账户存储</li>
+            <li>在 SubTracker 设置中关闭 iCloud 同步后删除本地数据</li>
+        </ul>
+
+        <h2>九、儿童隐私</h2>
+        <p>SubTracker 不针对 13 岁以下儿童，也不会有意收集儿童的个人信息。应用不包含任何社交功能、用户账户系统或对外通信功能。</p>
+
+        <h2>十、数据安全</h2>
+        <p>我们采取以下措施保护您的数据安全：</p>
+        <ul>
+            <li>Pro 订阅状态使用 iOS Keychain 安全存储</li>
+            <li>所有数据存储使用 Apple SwiftData / CloudKit 加密</li>
+            <li>应用不进行任何网络请求（除 App Store 内购和 iCloud 同步外）</li>
+            <li>不使用任何第三方网络通信库</li>
+        </ul>
+
+        <h2>十一、开发者联系</h2>
+        <p>如您对本隐私政策有任何疑问，请通过以下方式联系我们：</p>
+        <div class="contact">
+            <p>📧 <a href="mailto:subtracker.app@gmail.com">subtracker.app@gmail.com</a></p>
+        </div>
+
+        <div class="footer">
+            <p>最后更新日期：2025 年 4 月 28 日</p>
+            <p>版本：1.0</p>
+        </div>
+    </div>
+</body>
+</html>
